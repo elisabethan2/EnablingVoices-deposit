@@ -1,0 +1,79 @@
+# The archive DOI, version and release date are filled in once the deposit is
+# minted; the journal citation once the article is accepted. See the commented
+# blocks at the end of this file.
+
+cff-version: 1.2.0
+message: >-
+  If you use this software or data, please cite both the software (this record)
+  and the associated publication.
+title: >-
+  Enabling Voices: LLM-assisted screening pipeline for a scoping review of
+  AI-assisted communication support in dementia and aphasia
+abstract: >-
+  Code, prompts, and derived data for a scoping review of AI-assisted
+  communication support for people with dementia and aphasia, and for its
+  methodological contribution on locally hosted, open-source LLM-assisted
+  screening. Includes the screening and extraction prompts, per-record model
+  decisions with confidences and rationales, anonymised human annotations,
+  record-level corpus metadata, and a script that regenerates every reported
+  agreement and screening-performance statistic from the deposited records.
+type: software
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: https://github.com/elisabethan2/EnablingVoices-deposit
+keywords:
+  - scoping review
+  - large language models
+  - AI-assisted screening
+  - evidence synthesis
+  - aphasia
+  - dementia
+  - reproducibility
+
+authors:
+  - family-names: Andersen
+    given-names: Elisabeth Muth
+    affiliation: 'Department of Culture and Language, University of Southern Denmark, Odense, Denmark'
+    orcid: 'https://orcid.org/0000-0003-2844-0617'
+  - family-names: Ekström
+    given-names: Anna
+    affiliation: 'Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden'
+    orcid: 'https://orcid.org/0000-0001-5085-4264'
+  - family-names: Ingebrand
+    given-names: Elias
+    affiliation: 'Department of Clinical Science, Intervention and Technology, Karolinska Institutet, Stockholm, Sweden; Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden'
+    orcid: 'https://orcid.org/0000-0002-5449-8524'
+  - family-names: Lindeberg
+    given-names: Sophia
+    affiliation: 'Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden'
+    orcid: 'https://orcid.org/0000-0002-8243-1298'
+  - family-names: Majlesi
+    given-names: Ali Reza
+    affiliation: 'Department of Clinical Science, Intervention and Technology, Karolinska Institutet, Stockholm, Sweden'
+    orcid: 'https://orcid.org/0000-0001-7562-991X'
+  - family-names: Rasmussen
+    given-names: Gitte
+    affiliation: 'Department of Culture and Language, University of Southern Denmark, Odense, Denmark'
+    orcid: 'https://orcid.org/0000-0002-2940-0839'
+  - family-names: Samuelsson
+    given-names: Christina
+    affiliation: 'Department of Clinical Science, Intervention and Technology, Karolinska Institutet, Stockholm, Sweden'
+    orcid: 'https://orcid.org/0000-0003-0358-3048'
+
+# Fill in once the archive DOI is minted:
+# doi: 10.5281/zenodo.XXXXXXX
+# version: 1.0.0
+# date-released: 'YYYY-MM-DD'
+
+# Fill in once the article is accepted. Repeat the author block above verbatim
+# under `authors:`; CFF does not support referencing it.
+# preferred-citation:
+#   type: article
+#   title: >-
+#     Enabling Voices: AI-Assisted Communication Support for People with
+#     Dementia and Aphasia. A Scoping Review
+#   journal: Research Synthesis Methods
+#   year: 2026
+#   doi: 10.xxxx/xxxxx
+#   authors: []

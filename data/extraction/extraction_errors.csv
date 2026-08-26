@@ -1,0 +1,10 @@
+COV_ID,Study,Field,Extracted_value,Verified_value,Error_type,Model_confidence
+COV2660,Bailey 2026,AI model,GPT-3.5_language_model | Assembly.ai_ASR | GPT-4_language_model | Google_Cloud_ASR | language_model,GPT-3.5,Model misattribution (spurious GPT-4),3
+COV5607,Obiorah 2021,AI model,image_captioning | OCR | geographic_data | Cloudsight's API | Google Cloud Vision text API | GPT-4_language_model | image_recognition,"rule-based AAC; image-captioning APIs, no LLM",Model misattribution (spurious GPT-4),3
+COV5607,Obiorah 2021,N (participants),7,11,Participant miscount,3
+COV5607,Obiorah 2021,Setting,hospital_clinic,"multi-site: clinic, restaurants, community",Setting flattened (multi-site -> single),3
+COV5630,Purohit 2023,AI model,GPT-3.55 language model | GPT-4_language_model,GPT-3.5 (ChatGPT),Model misattribution (spurious GPT-4),4
+COV5630,Purohit 2023,Setting,university_lab,secondary analysis of AphasiaBank transcripts; no live deployment,Setting misidentified,4
+COV510,Sheehy 2024,AI model,speech-to-text | intent interpretation | text-to-speech | GPT-4_language_model | Google_Cloud_ASR | text_to_speech_TTS,GPT-3.5 (Stage 2),Model misattribution (spurious GPT-4),4
+COV1113,Stara 2021,AI model,automated speech recognition | text-to-speech functions | GPT-4_language_model | Google_Cloud_ASR,"rule-based (Anne; ASR+TTS), no LLM",Model misattribution (spurious GPT-4),3
+COV5688,Xygkou 2024,AI model,GPT-4_language_model,GPT-4,Correct (GPT-4 genuinely used),2

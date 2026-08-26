@@ -1,0 +1,38 @@
+# Inference stack — UCloud GPU environment (LLM screening, extraction, figures).
+#
+# Covers the stages that run on the GPU node: Round 1 Llama screening
+# (code/02_screening_round1/), Round 2 Qwen screening (code/04_screening_round2/),
+# full-text extraction (code/05_extraction/), the seed-stability check
+# (code/06_stability/), and figure generation (code/07_figures/).
+#
+# The statistics recomputation (code/08_validation_metrics/) runs in a separate
+# CPU-only environment — see requirements-analysis.txt. pandas, numpy and
+# openpyxl appear in both files at different versions; that is intentional, they
+# are two distinct environments.
+#
+# These versions make the released code reproducible going forward. They were
+# captured in June 2026 from the UCloud JupyterLab 4.3.5 image (Python 3.12.12)
+# by installing the pipeline's dependencies and freezing them.
+#
+# They are NOT claimed to equal the original February 2026 versions, which were
+# installed unpinned at run time and were not recorded (see docs/ENVIRONMENT.md).
+# The authoritative record of the original results is the deposited output files,
+# not a re-run. Note also the environment-sensitivity finding in ENVIRONMENT.md:
+# screening decisions proved stable to the random seed but sensitive to library
+# versions, so reproduction should use these exact pins.
+#
+# Python: 3.12
+# torch below is the CUDA 13.0 build (2.12.0+cu130); on a GPU install the
+# matching CUDA wheel, e.g. from the appropriate PyTorch index.
+
+torch==2.12.0
+transformers==5.10.2
+bitsandbytes==0.49.2
+accelerate==1.13.0
+PyPDF2==3.0.1
+PyMuPDF==1.27.2.3
+pandas==2.3.3
+openpyxl==3.1.5
+numpy==2.4.1
+scikit-learn==1.9.0
+matplotlib==3.10.8

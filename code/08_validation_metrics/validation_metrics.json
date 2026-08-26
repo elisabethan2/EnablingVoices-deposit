@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "generated_utc": "2026-06-08 18:53:56 UTC",
+    "script": "compute_review_statistics.py",
+    "determinism": "deterministic; no random seed applies (no sampling/stochastic steps)",
+    "python": "3.12.3",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "inputs": {
+      "annotator_file": "EnablingPapers150126/outputs/adjudication_output/master_comparison.xlsx",
+      "comparison_file": "EnablingPapers150126/outputs/model_comparison_report.xlsx",
+      "qwen_r2_file": "EnablingPapers150126/outputs/qwen_screening_v3_120326_3/enabling_voices_qwen_v3_20260312_230707.xlsx"
+    },
+    "notes": "Reference standards are stated per statistic; consensus = A==B annotator agreement."
+  },
+  "metrics": {
+    "subset_composition": {
+      "n_subset": 120,
+      "consensus_include": 9,
+      "consensus_exclude": 85,
+      "disagreement": 26,
+      "consensus_total_AeqB": 94
+    },
+    "inter_annotator": {
+      "n": 120,
+      "raw_agreement_pct": 78.3,
+      "kappa": 0.285
+    },
+    "llama_vs_consensus": {
+      "n": 94,
+      "TP": 7,
+      "FP": 10,
+      "TN": 75,
+      "FN": 2,
+      "sensitivity": 0.778,
+      "specificity": 0.882,
+      "precision": 0.412,
+      "accuracy": 0.872,
+      "kappa": 0.472
+    },
+    "qwenR1_vs_consensus": {
+      "n": 94,
+      "TP": 6,
+      "FP": 1,
+      "TN": 84,
+      "FN": 3,
+      "sensitivity": 0.667,
+      "specificity": 0.988,
+      "precision": 0.857,
+      "accuracy": 0.957,
+      "kappa": 0.727
+    },
+    "llama_qwenR1_agreement": {
+      "all_120_raw_pct": 84.2,
+      "all_120_kappa": 0.421,
+      "all_120_n": 120,
+      "valid_only_raw_pct": 82.9,
+      "valid_only_n": 111,
+      "note": "valid_only excludes records with a failed Llama text-extraction; all_120 counts failures as exclude."
+    },
+    "retrospective_vs_final6": {
+      "reference": "final included set (N=6); descriptive/post-hoc, not a diagnostic gold standard",
+      "n_final": 6,
+      "n_final_in_subset": 6,
+      "llama_R1": {
+        "includes_total": 28,
+        "final_recovered": 5,
+        "over_inclusions": 23
+      },
+      "qwen_R1": {
+        "includes_total": 9,
+        "final_recovered": 4,
+        "over_inclusions": 5,
+        "missed_final": 2
+      },
+      "qwen_R2_in_subset": {
+        "includes_in_subset": 21,
+        "final_recovered": 5,
+        "over_inclusions": 16
+      }
+    },
+    "qwenR2_include_split": {
+      "total_includes": 41,
+      "overlap_human_validated": 8,
+      "human_reviewed_exclusions": 13,
+      "new_outside_subset": 20,
+      "sum_check": 41
+    },
+    "inclusion_accounting": {
+      "human_validated_includes": 12,
+      "final_included": 6,
+      "removed_at_full_text": 6,
+      "removed_covs": [
+        "COV3004",
+        "COV5169",
+        "COV5183",
+        "COV5454",
+        "COV5509",
+        "COV575"
+      ],
+      "final_all_from_subset": true,
+      "new_papers_reviewed": 20,
+      "new_papers_included": 0
+    },
+    "checks": {
+      "subset_parts_sum_to_n": true,
+      "human_validated_is_12": true,
+      "qwenR2_split_sums_to_total": true,
+      "twelve_minus_removed_is_six": true
+    }
+  }
+}

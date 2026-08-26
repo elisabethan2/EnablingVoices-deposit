@@ -1,0 +1,32 @@
+# Analysis stack — CPU-only environment for the statistics recomputation.
+#
+# Covers code/08_validation_metrics/compute_review_statistics.py, which recomputes
+# every screening and validation statistic reported in Sections 3.2-3.5 from the
+# deposited screening and annotation outputs.
+#
+# No GPU, no model weights, and no PDF handling are involved: this stage reads the
+# deposited .xlsx outputs and writes validation_metrics.xlsx / .json. The GPU
+# inference stack is in requirements-inference.txt.
+#
+# PROVENANCE OF THESE VERSIONS. Unlike requirements-inference.txt, these are not
+# re-pins of an older stack: they were captured with `pip freeze` on 2026-08-26
+# from a clean virtual environment in which compute_review_statistics.py was then
+# run against the deposited inputs. That run reproduced all 68 reported metric
+# values exactly (see docs/ENVIRONMENT.md, "Verification run").
+#
+# This environment is NOT the machine that generated the deposited
+# validation_metrics.* files on 2026-06-08. That run recorded Python 3.12.3,
+# pandas 3.0.2 and numpy 2.4.4 in its own output metadata. The Python version
+# matches; pandas and numpy differ at the patch/minor level. The metrics are
+# identical under both, which is the point of recording this.
+#
+# Python: 3.12.3
+# Direct dependencies: numpy, pandas, openpyxl. The remaining entries are
+# transitive and are listed because `pip freeze` lists them.
+
+et_xmlfile==2.0.0
+numpy==2.5.2
+openpyxl==3.1.5
+pandas==3.0.5
+python-dateutil==2.9.0.post0
+six==1.17.0

@@ -1,0 +1,52 @@
+# =============================================================================
+# Enabling Voices — deposit hygiene .gitignore
+# Keeps copyrighted PDFs, personally identifying raw files, and secrets out of
+# the repository, plus the usual Python/Jupyter/OS clutter.
+# =============================================================================
+
+# --- Copyright: full-text PDFs of screened records (identify by DOI instead) ---
+*.pdf
+
+# --- Personally identifying raw annotation files (GDPR) -----------------------
+# Only the anonymised Annotator_1..8 files belong in the repo. Exclude any raw,
+# name-bearing originals and the offline name key.
+**/annotator_*[A-Za-z].xlsx
+**/*_named.xlsx
+**/*name_key*
+**/*name-key*
+**/*_key*
+**/annotator_key*
+
+# --- Secrets / credentials ----------------------------------------------------
+*.env
+.env
+*.env.*
+*token*
+hf_token*
+*_token
+*.key
+*secret*
+credentials*
+*apikey*
+*api_key*
+
+# --- Python -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# --- Jupyter ------------------------------------------------------------------
+.ipynb_checkpoints/
+
+# --- OS / editor --------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# --- Re-run outputs -----------------------------------------------------------
+# compute_review_statistics.py writes here by default. The deposited copies live
+# at code/08_validation_metrics/validation_metrics.{xlsx,json} and are tracked;
+# regenerated ones are not.
+code/08_validation_metrics/outputs/
