@@ -1,0 +1,22 @@
+{
+  "upload_type": "software",
+  "title": "Enabling Voices: LLM-assisted screening pipeline for a scoping review of AI-assisted communication support in dementia and aphasia",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "description": "<p>Archived deposit accompanying the scoping review <em>Enabling Voices: AI-Assisted Communication Support for People with Dementia and Aphasia</em>.</p><p>Contains the analysis code, the screening and extraction prompts, per-record model screening decisions with confidence scores and rationales, anonymised human annotations, the 120-record validation subset as drawn, the seed-stability check output, record-level corpus metadata, and a script that regenerates every reported inter-annotator agreement and screening-performance statistic from the deposited records.</p><p>Screening was performed with locally hosted, open-source models (Llama 3.1 8B and Qwen 2.5 7B) on institutional research computing infrastructure; no bibliographic or full-text data left the institution and no external API was used.</p><p>Licensing is dual: code under the MIT Licence, data and documentation under Creative Commons Attribution 4.0 International. Both licence texts are included in the archive as LICENSE and LICENSE-DATA.txt. The single licence field above records the terms applying to the data and documentation that make up the bulk of the deposit.</p><p>Full-text PDFs of screened records are not redistributed, for copyright reasons; records are identified by DOI so they can be retrieved independently.</p>",
+  "creators": [
+    {"name": "Andersen, Elisabeth Muth", "affiliation": "Department of Culture and Language, University of Southern Denmark, Odense, Denmark", "orcid": "0000-0003-2844-0617"},
+    {"name": "Ekström, Anna", "affiliation": "Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden", "orcid": "0000-0001-5085-4264"},
+    {"name": "Ingebrand, Elias", "affiliation": "Department of Clinical Science, Intervention and Technology, Karolinska Institutet, Stockholm, Sweden", "orcid": "0000-0002-5449-8524"},
+    {"name": "Lindeberg, Sophia", "affiliation": "Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden", "orcid": "0000-0002-8243-1298"},
+    {"name": "Majlesi, Ali Reza", "affiliation": "Department of Clinical Science, Intervention and Technology, Karolinska Institutet, Stockholm, Sweden", "orcid": "0000-0001-7562-991X"},
+    {"name": "Rasmussen, Gitte", "affiliation": "Department of Culture and Language, University of Southern Denmark, Odense, Denmark", "orcid": "0000-0002-2940-0839"},
+    {"name": "Samuelsson, Christina", "affiliation": "Department of Clinical Science, Intervention and Technology, Karolinska Institutet, Stockholm, Sweden", "orcid": "0000-0003-0358-3048"}
+  ],
+  "keywords": [
+    "scoping review", "large language models", "AI-assisted screening",
+    "evidence synthesis", "aphasia", "dementia", "reproducibility",
+    "augmentative and alternative communication"
+  ]
+}
